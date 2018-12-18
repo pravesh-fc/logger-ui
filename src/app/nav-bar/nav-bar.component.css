@@ -1,0 +1,14 @@
+.logoTop{
+  height:40px;
+}
+.subscribeBtn{
+  border:thin white solid;
+  color:#FCFFFE;
+  padding: 12px;
+  float: right;
+  position: absolute;
+  right: 0;
+}
+.top-section{
+  display: inline-flex;
+}

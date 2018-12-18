@@ -1,0 +1,25 @@
+<div *ngIf="event">
+  <p class="titleLayer"><span class="titleColor titleAlign" > Scheduled Maintainence </span></p>
+  <p class="titleLayerLessPad">
+    <span class="titleColor titleScheduled ">{{ event.name }}</span>
+    <span class="dateTime">Scheduled for {{ event.start_date }} - {{ event.end_date }}</span>
+  </p>
+  <hr class="divider"/>
+  <p class="titleColor">
+    {{ event.details }}
+  </p>
+  <p class="titleLayer postedDate">Posted on  {{ event.created_at }} </p>
+</div>
+<div>
+  <p class="titleLayer">
+    <span class="titleColor">System Metrics</span>
+    <span class="titleColor daymoye" >
+      <a (click)="getAllLogs(0)">Day</a> |
+      <a (click)="getAllLogs(1)">Month</a> |
+      <a (click)="getAllLogs(2)">Year</a> |
+    </span>
+  </p>
+  <div *ngIf="logData">
+    <app-chart [logs]= "logData"></app-chart>
+  </div>
+</div>

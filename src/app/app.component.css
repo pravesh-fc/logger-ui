@@ -1,0 +1,74 @@
+.logoTop{
+  height:40px;
+}
+.subscribeBtn{
+  border:thin white solid;
+  color:#FCFFFE;
+  padding: 12px;
+  float: right;
+  position: absolute;
+  right: 0;
+}
+.top-section{
+  display: inline-flex;
+}
+.upperBtn{
+  margin-top:50px;
+  background-color:#8DE2C3 !important;
+}
+.divider{
+  color: grey;
+}
+.customBlock{
+  background-color:white !important;
+  margin-top: 0px !important;
+  color:grey;
+  display: inline-flex;
+
+}
+.titleColor{
+  color: grey
+}
+.titleLayer{
+  padding-top:30px;
+  text-align: left;
+}
+.titleLayerLessPad{
+  padding-top:10px;
+  text-align: left;
+}
+
+.customNavbar{
+  background-color:#4682B4;
+  color:#FCFFFE;
+}
+.titleScheduled{
+  font-size:18px;
+}
+.dateTime{
+  float: right;
+  color:grey;
+}
+.description{
+  color:grey;
+}
+.postedDate{
+  color:grey;
+}
+.daymoye{
+  float:right;
+}
+.txtArea{
+  width: 100%;
+  border-radius: 5px;
+}
+.pastBlock{
+  padding-top:20px;
+}
+#pastIncidents{
+  text-align: left;
+  font-size: 24px;
+}
+.incidentDesc{
+  text-align: left;
+}
