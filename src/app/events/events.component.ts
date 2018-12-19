@@ -7,14 +7,22 @@ import { ApiService } from '../api.service';
   styleUrls: ['./events.component.css']
 })
 export class EventsComponent implements OnInit {
+  displayValues: any = ['Core Application', 'Email Communication',
+                    'Text Communication', 'Fax Communication',
+                    'Payment Gateway', 'Phone Support'];
+  totalTypes: any = ['application', 'email',
+    'text', 'fax',
+    'payment', 'phone'];
   event: any;
   logData: any;
+  type: any;
   constructor(private apiService: ApiService) { }
   ngOnInit() {
      this.getAllEvents();
+     this.type = this.totalTypes[0];
   }
-
-  ngOnViewInit() {    
+  selectedTab = (value) => {
+    this.type = this.totalTypes[value];
   }
   getAllEvents = () => {
     this.apiService.getAllData().subscribe( (res) => {
@@ -24,7 +32,6 @@ export class EventsComponent implements OnInit {
       }
     });
   }
-
   getAllLogs = (duration) => {
     this.apiService.getAllLogs(duration).subscribe( (res) => {
       if (res.status === 200) {

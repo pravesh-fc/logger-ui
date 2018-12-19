@@ -1,3 +1,13 @@
+<div class="buttonBlock" *ngFor="let item of displayValues; let i = index">
+  <button type="button" class="btn btn-primary btn-block customBlock" (click)="selectedTab(i)">
+    <div class="upperBtnClick">
+      <div class="statusFlag operational">
+      </div>
+    </div>
+    <span class="upperBtnTxt">{{ item }}</span>
+    <span class="statusTxt operational-text">Operational</span>
+  </button>
+</div>
 <div *ngIf="event">
   <p class="titleLayer"><span class="titleColor titleAlign" > Scheduled Maintainence </span></p>
   <p class="titleLayerLessPad">
@@ -20,6 +30,6 @@
     </span>
   </p>
   <div >
-    <app-chart [logs]= "logData"></app-chart>
+    <app-chart [logs]= "logData" [chartType]="type"></app-chart>
   </div>
 </div>
