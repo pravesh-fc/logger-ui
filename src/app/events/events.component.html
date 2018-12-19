@@ -19,7 +19,7 @@
       <a (click)="getAllLogs(2)">Year</a> |
     </span>
   </p>
-  <div *ngIf="logData">
+  <div >
     <app-chart [logs]= "logData"></app-chart>
   </div>
 </div>

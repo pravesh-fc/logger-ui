@@ -11,10 +11,10 @@ export class EventsComponent implements OnInit {
   logData: any;
   constructor(private apiService: ApiService) { }
   ngOnInit() {
-    this.getAllEvents();
+     this.getAllEvents();
   }
 
-  ngOnViewInit() {
+  ngOnViewInit() {    
   }
   getAllEvents = () => {
     this.apiService.getAllData().subscribe( (res) => {
