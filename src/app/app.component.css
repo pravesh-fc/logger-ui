@@ -104,37 +104,3 @@ color:#FCFFFE;
   justify-content: center;
 }
 
-
-/* Background color and text colors */
-
-.operational{
-  background-color:#0CCC91;
-}
-.operational-text{
-  color:#0CCC91;
-}
-.emailCom{
-  background-color:#FCDB00;
-}
-.emailCom-text{
-  color:#FCDB00;
-}
-.textCom{
-  background-color:#E89F1F;
-}
-.textCom-text{
-  color:#E89F1F;
-}
-.faxCom{
-  background-color:#FF494B;
-}
-.faxCom-text{
-   color:#FF494B;
-}
-.paymentGate{
-  background-color:#4682B4;
-}
-.paymentGate-text{
-  color:#4682B4;
-}
-

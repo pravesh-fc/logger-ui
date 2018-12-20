@@ -46,11 +46,13 @@
   }
   
   .customNavbar{
-  background-color:#4682B4;
-  color:#FCFFFE;
+    background-color:#4682B4;
+    color:#FCFFFE;
   }
   .titleScheduled{
-   font-size:18px;
+    font-weight: bold;
+    font-size:18px;
+    color: #333131;
   }
   .dateTime{
     float: right;
@@ -100,3 +102,40 @@
     margin-top: 2px;
     border-radius: 2px;
   }
+
+/* Background color and text colors */
+
+.operational-bg{
+  background-color:#0CCC91;
+}
+.operational-txt{
+  color:#0CCC91;
+}
+.degraded-performance-bg{
+  background-color:#FCDB00;
+}
+.degraded-performance-txt{
+  color:#FCDB00;
+}
+.partial-outage-bg{
+  background-color:#E89F1F;
+}
+.partial-outage-txt{
+  color:#E89F1F;
+}
+.major-outage-bg{
+  background-color:#FF494B;
+}
+.major-outage-txt{
+  color:#FF494B;
+}
+.maintenance-bg{
+  background-color:#4682B4;
+}
+.maintenance-txt{
+  color:#4682B4;
+}
+.active-duration {
+  font-weight: 700;
+  color: black !important;
+}

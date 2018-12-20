@@ -1,5 +1,6 @@
-import {Component, Input, OnChanges, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnChanges, OnInit, Output} from '@angular/core';
 import * as moment from 'moment';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-chart',
@@ -9,33 +10,18 @@ import * as moment from 'moment';
 export class ChartComponent implements OnInit, OnChanges {
   @Input() logs: any;
   @Input() chartType: any;
+  @Input() durationType: any;
   chartData: any;
-  constructor() { }
+  constructor(private apiService: ApiService) { }
 
   ngOnInit() {
   }
   ngOnChanges() {
-    if (this.logs) {
-      const chartType = this.chartType;
-      const logs = this.logs;
-      const data = [['Task', 'uptime']];
-      Object.keys(logs).forEach(function (key) {
-        const objKey = JSON.parse(key);
-        if (objKey[0] === chartType && objKey[2] === 'ok') {
-          let failedValue = 0;
-          const fails  = logs[ `["${objKey[0]}", "${objKey[1]}", "fail"]` ];
-          const date = moment(objKey[1]).format('h A, MMM D YY');
-          if (fails) {
-            failedValue = fails;
-          }
-          // @ts-ignore
-          data.push([date, 100 - (failedValue / (logs[key] + failedValue))]);
-        }
-      });
+      const data = this.apiService.createLogsData(this.logs, this.chartType, this.durationType);
       this.showChart(data, this.chartType);
-    }
   }
-  showChart(data, chartType) {
+
+  showChart = (data, chartType) => {
     this.chartData =  {
       chartType: 'LineChart',
       dataTable: data,

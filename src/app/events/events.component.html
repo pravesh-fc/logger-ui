@@ -1,12 +1,14 @@
-<div class="buttonBlock" *ngFor="let item of displayValues; let i = index">
-  <button type="button" class="btn btn-primary btn-block customBlock" (click)="selectedTab(i)">
-    <div class="upperBtnClick">
-      <div class="statusFlag operational">
+<div *ngIf="allSystemHealth">
+  <div class="buttonBlock" *ngFor="let item of displayValues; let i = index">
+    <button type="button" class="btn btn-primary btn-block customBlock" (click)="selectedTab(i)">
+      <div class="upperBtnClick">
+        <div class="statusFlag" [ngClass]="allSystemHealth[i].split(' ').join('-')+ '-bg'">
+        </div>
       </div>
-    </div>
-    <span class="upperBtnTxt">{{ item }}</span>
-    <span class="statusTxt operational-text">Operational</span>
-  </button>
+      <span class="upperBtnTxt">{{ item }}</span>
+      <span class="statusTxt" [ngClass]="allSystemHealth[i].split(' ').join('-')+ '-txt'" [innerHTML]="allSystemHealth[i] | titlecase"></span>
+    </button>
+  </div>
 </div>
 <div *ngIf="event">
   <p class="titleLayer"><span class="titleColor titleAlign" > Scheduled Maintainence </span></p>
@@ -23,13 +25,11 @@
 <div>
   <p class="titleLayer">
     <span class="titleColor">System Metrics</span>
-    <span class="titleColor daymoye" >
-      <a (click)="getAllLogs(0)">Day</a> |
-      <a (click)="getAllLogs(1)">Month</a> |
-      <a (click)="getAllLogs(2)">Year</a> |
+    <span class="titleColor daymoye" *ngFor="let duration of displayDuration;let i = index" >
+      <a (click)="getLogsByDuration(i)" [ngClass]="{'active-duration' : activeDuration === duration }">{{duration}}</a> |
     </span>
   </p>
   <div >
-    <app-chart [logs]= "logData" [chartType]="type"></app-chart>
+    <app-chart [logs]= "logData" [chartType]="type" [durationType] = "activeDuration"></app-chart>
   </div>
 </div>
