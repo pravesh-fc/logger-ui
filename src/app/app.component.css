@@ -14,7 +14,7 @@
 }
 .upperBtn{
   margin-top:50px;
-  background-color:#8DE2C3 !important;
+  background-color:#0CCC91 !important;
 }
 .divider{
   color: grey;
@@ -24,14 +24,22 @@
   margin-top: 0px !important;
   color:grey;
   display: inline-flex;
+  border:thin #EEEEEE solid;
+
+}
+.customBlock:hover {
+  background-color:white !important;
+  margin-top: 0px !important;
+  color:grey;
+  display: inline-flex;
 
 }
 .titleColor{
-  color: grey
+ color: grey
 }
 .titleLayer{
-  padding-top:30px;
-  text-align: left;
+ padding-top:30px;
+ text-align: left;
 }
 .titleLayerLessPad{
   padding-top:10px;
@@ -39,11 +47,11 @@
 }
 
 .customNavbar{
-  background-color:#4682B4;
-  color:#FCFFFE;
+background-color:#4682B4;
+color:#FCFFFE;
 }
 .titleScheduled{
-  font-size:18px;
+ font-size:18px;
 }
 .dateTime{
   float: right;
@@ -72,3 +80,61 @@
 .incidentDesc{
   text-align: left;
 }
+.upperBtnClick{
+  float: left;
+  height:inherit;
+}
+.upperBtnTxt{
+  float: left;
+  padding-left: 15px;
+}
+.statusTxt{
+  position: absolute;
+  right: 35px;
+}
+
+.statusFlag{
+  border: thin black solid;
+  height: 15px;
+  width: 15px;
+  margin-top: 2px;
+  border-radius: 2px;
+}
+.dispCenter{
+  justify-content: center;
+}
+
+
+/* Background color and text colors */
+
+.operational{
+  background-color:#0CCC91;
+}
+.operational-text{
+  color:#0CCC91;
+}
+.emailCom{
+  background-color:#FCDB00;
+}
+.emailCom-text{
+  color:#FCDB00;
+}
+.textCom{
+  background-color:#E89F1F;
+}
+.textCom-text{
+  color:#E89F1F;
+}
+.faxCom{
+  background-color:#FF494B;
+}
+.faxCom-text{
+   color:#FF494B;
+}
+.paymentGate{
+  background-color:#4682B4;
+}
+.paymentGate-text{
+  color:#4682B4;
+}
+

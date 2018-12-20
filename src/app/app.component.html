@@ -1,32 +1,21 @@
 <app-nav-bar></app-nav-bar>
+
 <div class="container">
-  <div class="col-lg-3 d-none"></div>
-  <div class="col-lg-6  starter-template">
-    <button type="button" class="btn btn-primary btn-block upperBtn">All Systems Operational</button>
-    <hr class="divider"/>
-    <div class="buttonBlock">
-      <button type="button" class="btn btn-primary btn-block customBlock">
-        <div>
-          <span></span>
-          <span>Core Applications</span>
-        </div>
-        <span class="daymoye">Operational</span>
-      </button>
-      <button type="button" class="btn btn-primary btn-block customBlock">All Systems Operational</button>
-      <button type="button" class="btn btn-primary btn-block customBlock">All Systems Operational</button>
-      <button type="button" class="btn btn-primary btn-block customBlock">All Systems Operational</button>
-      <button type="button" class="btn btn-primary btn-block customBlock">All Systems Operational</button>
-      <button type="button" class="btn btn-primary btn-block customBlock">All Systems Operational</button>
-    </div>
-    <app-events></app-events>
-    <div class="pastBlock">
-      <p class="titleColor " id="pastIncidents"><span>Past Incidents </span></p>
-      <div>
-        <p class="titleLayer titleColor">Dec 10, 2018</p>
-        <hr class="divider"/>
-        <p class="incidentDesc titleColor">No incidents reported today</p>
+  <div class="row dispCenter">
+      <div class="col-lg-3 d-none"></div>
+      <div class="col-lg-6  starter-template">
+         <button type="button" class="btn btn-primary btn-block upperBtn"><span class="upperBtnClick"><img height="25" src="./assets/Images/check-mark-transparent.png"/></span><span class="upperBtnTxt">All Systems Operational</span></button>
+         <hr class="divider"/>
+         <app-events></app-events>
+         <div class="pastBlock">
+           <p class="titleColor " id="pastIncidents"><span>Past Incidents </span></p>
+           <div>
+              <p class="titleLayer titleColor">Dec 10, 2018</p>
+              <hr class="divider"/>
+              <p class="incidentDesc titleColor">No incidents reported today</p>
+           </div>
+         </div>
       </div>
-    </div>
+    <div class="col-lg-3 d-none"></div>
   </div>
-  <div class="col-lg-3 d-none"></div>
 </div>
