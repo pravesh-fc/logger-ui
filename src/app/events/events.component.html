@@ -10,17 +10,24 @@
     </button>
   </div>
 </div>
-<div *ngIf="event">
+<div>
   <p class="titleLayer"><span class="titleColor titleAlign" > Scheduled Maintainence </span></p>
-  <p class="titleLayerLessPad">
-    <span class="titleColor titleScheduled ">{{ event.name }}</span>
-    <span class="dateTime">Scheduled for {{ event.start_date }} - {{ event.end_date }}</span>
-  </p>
-  <hr class="divider"/>
-  <p class="titleColor">
-    {{ event.details }}
-  </p>
-  <p class="titleLayer postedDate">Posted on  {{ event.created_at }} </p>
+  <div *ngIf="event; else noEvent">    
+    <p class="titleLayerLessPad">
+      <span class="titleColor titleScheduled ">{{ event.name }}</span>
+      <span class="dateTime">Scheduled for {{ event.start_date }} - {{ event.end_date }}</span>
+    </p>
+    <hr class="divider"/>
+    <p class="titleColor">
+      {{ event.details }}
+    </p>
+    <p class="titleLayer postedDate">Posted on  {{ event.created_at }} </p>
+  </div>
+  <ng-template #noEvent>
+    <p class="titleLayerLessPad">
+      <span class="titleColor titleScheduled ">No scheduled notice</span>
+    </p>
+  </ng-template>
 </div>
 <div>
   <p class="titleLayer">
@@ -29,7 +36,7 @@
       <a (click)="getLogsByDuration(i)" [ngClass]="{'active-duration' : activeDuration === duration }">{{duration}}</a> |
     </span>
   </p>
-  <div >
+  <div>
     <app-chart [logs]= "logData" [chartType]="type" [durationType] = "activeDuration"></app-chart>
   </div>
 </div>

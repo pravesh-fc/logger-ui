@@ -16,7 +16,6 @@ export class EventsComponent implements OnInit {
   totalTypes: any = ['application', 'email',
     'text', 'fax',
     'payment', 'phone'];
-  allStatus: any = ['operational', 'degraded performance', 'partial outage', 'major outage', 'maintenance'];
   allSystemHealth: any;
   event: any;
   logData: any;
@@ -34,9 +33,11 @@ export class EventsComponent implements OnInit {
       if (res.status === 200) {
         this.allSystemHealth = this.apiService.getApplicationHealth(res.data.logs, this.totalTypes);
         this.event = res.data.event;
-        this.event['start_date'] = moment(this.event['start_date']).tz('US/Pacific').format('MMM DD, hh:mm z');
-        this.event['end_date'] = moment(this.event['end_date']).tz('US/Pacific').format('MMM DD, hh:mm z');
-        this.event['created_at'] = moment(this.event['created_at']).tz('US/Pacific').format('MMM DD, hh:mm z');
+        if (this.event) {
+          this.event['start_date'] = moment(this.event['start_date']).tz('US/Pacific').format('MMM DD, hh:mm z');
+          this.event['end_date'] = moment(this.event['end_date']).tz('US/Pacific').format('MMM DD, hh:mm z');
+          this.event['created_at'] = moment(this.event['created_at']).tz('US/Pacific').format('MMM DD, hh:mm z');
+        }
         this.logData = res.data.logs;
       }
     });
