@@ -24,14 +24,14 @@
     margin-top: 0px !important;
     color:grey;
     display: inline-flex;
-  
+
   }
   .customBlock:hover {
     background-color:white !important;
     margin-top: 0px !important;
     color:grey;
     display: inline-flex;
-  
+
   }
   .titleColor{
    color: #5f5c5c
@@ -44,7 +44,7 @@
     padding-top:10px;
     text-align: left;
   }
-  
+
   .customNavbar{
     background-color:#4682B4;
     color:#FCFFFE;
@@ -94,7 +94,7 @@
     position: absolute;
     right: 35px;
   }
-  
+
   .statusFlag{
     border: thin black solid;
     height: 15px;
@@ -138,4 +138,12 @@
 .active-duration {
   font-weight: 700;
   color: black !important;
+}
+.graph-box{
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  border-radius: 5px;
+  height: 250px
 }
