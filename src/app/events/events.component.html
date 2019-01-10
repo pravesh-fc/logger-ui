@@ -12,7 +12,7 @@
 </div>
 <div>
   <p class="titleLayer"><span class="titleColor titleAlign" > Scheduled Maintainence </span></p>
-  <div *ngIf="event; else noEvent">    
+  <div *ngIf="event; else noEvent">
     <p class="titleLayerLessPad">
       <span class="titleColor titleScheduled ">{{ event.name }}</span>
       <span class="dateTime">Scheduled for {{ event.start_date }} - {{ event.end_date }}</span>
@@ -36,7 +36,7 @@
       <a (click)="getLogsByDuration(i)" [ngClass]="{'active-duration' : activeDuration === duration }">{{duration}}</a> |
     </span>
   </p>
-  <div>
+  <div class="col-12 graph-box">
     <app-chart [logs]= "logData" [chartType]="type" [durationType] = "activeDuration"></app-chart>
   </div>
 </div>

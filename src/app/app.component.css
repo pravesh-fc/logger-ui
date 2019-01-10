@@ -103,4 +103,6 @@ color:#FCFFFE;
 .dispCenter{
   justify-content: center;
 }
-
+.headText{
+  font-weight: bold;
+}

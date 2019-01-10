@@ -26,7 +26,13 @@ export class ChartComponent implements OnInit, OnChanges {
       chartType: 'LineChart',
       dataTable: data,
       legend: {position: 'none'},
-      options: {title: chartType.toUpperCase(), allowHtml: true}
+      options: {
+        title: chartType.toUpperCase(),
+        allowHtml: true,
+        vAxis: { minValue: 0, maxValue: 100 },
+        height: 240,
+        width: 710
+      }
     };
   }
 }
