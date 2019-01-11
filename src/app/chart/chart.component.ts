@@ -31,7 +31,7 @@ export class ChartComponent implements OnInit, OnChanges {
         allowHtml: true,
         vAxis: { minValue: 0, maxValue: 100 },
         height: 240,
-        width: 710
+        width: 900
       }
     };
   }
