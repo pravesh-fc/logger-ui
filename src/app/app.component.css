@@ -86,6 +86,7 @@ color:#FCFFFE;
 }
 .upperBtnTxt{
   float: left;
+  font-size: 28px;
   padding-left: 15px;
 }
 .statusTxt{
