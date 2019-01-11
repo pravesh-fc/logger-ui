@@ -15,6 +15,8 @@
   .upperBtn{
     margin-top:50px;
     background-color:#0CCC91 !important;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
   .divider{
     color: grey;
@@ -24,6 +26,8 @@
     margin-top: 0px !important;
     color:grey;
     display: inline-flex;
+    padding-top: 15px;
+    padding-bottom: 15px;
 
   }
   .customBlock:hover {
@@ -147,3 +151,4 @@
   border-radius: 5px;
   height: 250px
 }
+
