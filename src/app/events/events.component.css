@@ -38,7 +38,8 @@
 
   }
   .titleColor{
-   color: #5f5c5c
+   color: #5f5c5c;
+   font-size: 20px;
   }
   .titleLayer{
    padding-top:30px;
@@ -154,3 +155,6 @@
   height: 250px
 }
 
+.pastBlock{
+  padding-top:20px;
+}

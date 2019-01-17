@@ -105,5 +105,10 @@ color:#FCFFFE;
   justify-content: center;
 }
 .headText{
-  font-weight: bold;
+  font-weight: 400;
+  font-size: 22px;
+}
+.pastInd{
+  font-weight: 400;
+  font-size: 30px;
 }
