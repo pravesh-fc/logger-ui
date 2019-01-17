@@ -1,9 +1,7 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "~font-awesome/css/font-awesome.css";/* You can add global styles to this file, and also import other style files */
-@font-face {
-  font-family: sansFont;
-  src: url('/assets/fonts/OpenSans-Regular.ttf');
-}
+@import "./assets/fonts/proxima-nova.css";
+
 body {
-  font-family: sansFont !important;
+	font-family: 'proxima-nova', sans-serif;
 }
