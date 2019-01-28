@@ -94,7 +94,7 @@
   .upperBtnTxt{
     float: left;
     font-size: 18px;
-    font-weight: 100;
+    font-weight: 400;
     padding-left: 15px;
   }
   .statusTxt{
@@ -117,6 +117,8 @@
 }
 .operational-txt{
   color:#0CCC91;
+  font-weight: 500;
+  font-size: 20px;
 }
 .degraded-performance-bg{
   background-color:#FCDB00;

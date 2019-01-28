@@ -79,6 +79,8 @@ color:#FCFFFE;
 }
 .incidentDesc{
   text-align: left;
+  font-weight: 100;
+  font-size: 18px;
 }
 .upperBtnClick{
   float: left;
@@ -105,10 +107,10 @@ color:#FCFFFE;
   justify-content: center;
 }
 .headText{
-  font-weight: 400;
+  font-weight: 500;
   font-size: 22px;
 }
 .pastInd{
-  font-weight: 400;
+  font-weight: 500;
   font-size: 30px;
 }
