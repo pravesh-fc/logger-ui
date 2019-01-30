@@ -28,6 +28,7 @@
     display: inline-flex;
     padding-top: 15px;
     padding-bottom: 15px;
+    border-color: #999;
 
   }
   .customBlock:hover {
@@ -72,6 +73,7 @@
   .daymoye{
     float:right;
     cursor:pointer;
+    padding-left: 5px;
   }
   .txtArea{
     width: 100%;
@@ -93,13 +95,15 @@
   }
   .upperBtnTxt{
     float: left;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 400;
     padding-left: 15px;
+    color: #666;
   }
   .statusTxt{
     position: absolute;
     right: 35px;
+    font-size: 20px;
   }
 
   .statusFlag{
