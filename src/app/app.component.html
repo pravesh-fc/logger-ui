@@ -10,10 +10,10 @@
          <div class="pastBlock">
            <p class="titleColor" id="pastIncidents">
              <span class="pastInd">Past Incidents </span></p>
-             <div *ngFor="let i of arrayOfDays" id="qqqq">
+             <div *ngFor="let i of arrayOfDays let first = first;" id="qqqq" >
                 <p class="titleLayer titleColor headText">{{ i }} </p>
                 <hr class="divider"/>
-                <p class="incidentDesc titleColor">No incidents reported today</p>
+                <p class="incidentDesc titleColor">No incidents reported {{ first== true ? 'today' : '' }}</p>
              </div>
          </div>
       </div>
